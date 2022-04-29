@@ -5,7 +5,7 @@ import TodoList from './components/TodoList'
 const App = () => {
 
 
-
+    const [popuptext, setPopup] = useState(false)
     const [inputText, setInputText] = useState('')
     const [todos, setTodos] = useState(() => {
         // getting stored value
@@ -34,13 +34,18 @@ const App = () => {
         localStorage.setItem("todos", JSON.stringify(todos))
     }, [todos, status])
 
-
+    const handleExit = () => {
+        setPopup(false)
+    }
     return (
         <div>
-            {inputText}
+
 
             <Header />
             <Form
+                popuptext={popuptext}
+                setPopup={setPopup}
+                handleExit={handleExit}
                 todos={todos}
                 setTodos={setTodos}
                 inputText={inputText}

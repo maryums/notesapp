@@ -7,12 +7,13 @@
 }
 
 body {
-    background: #CB997E;
+    background: #DDE1E4;
 	font-family: 'Inter', sans-serif;
 	min-height: 100vh;
 }
 
 .header {
+    margin-top: 20px;
 	font-size: 2rem;
 	text-align: center;
 
@@ -35,17 +36,17 @@ form button {
 	padding: 0.5rem;
 	font-size: 1rem;
 	border: 1px solid black;
-	background: #CB997E;
+	background: #DDE1E4;
 }
 
 form button:hover {
-	background: #346689;
+	background: #856084;
 	color: white;
 }
 
 form button {
 	color: #000000;
-	background: #CB997E;
+	background: #DDE1E4;
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
@@ -63,7 +64,7 @@ form button {
 }
 
 .todo {
-    background: #CB997E;
+    background: #DDE1E4;
 	margin: 0.5rem;
 	font-size: 1.5rem;
 	color: black;
@@ -83,7 +84,7 @@ form button {
 
 .trash-btn,
 .complete-btn {
-	background: #346689;
+	background: #856084;
 	color: white;
 	border: none;
 	padding: .5rem;
@@ -92,11 +93,11 @@ form button {
 }
 
 .complete-btn {
-	background: #6B705C;
+	background: #84E296;
 }
 
 .todo-item {
-    background: #CB997E;
+    background: #DDE1E4;
 	padding: 0rem 0.5rem;
 }
 
@@ -109,7 +110,7 @@ select {
     margin: 10px;
 	font-family: 'Inter', sans-serif;
 	font-size: 1rem;
-    background: #CB997E;
+    background: #DDE1E4;
 }
 
 .submit-btn {
@@ -123,3 +124,37 @@ select {
 	display: inline-block;
 	font-size: 16px;
 }
+
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  .modal_content {
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+  }
+  
+  .close {
+    color: Black;
+    float: right;
+  }
+  
+  .close:hover {
+    color: cyan;
+    cursor: pointer;
+  }
+  
+  .popup_info {
+  text-align: center;
+  }

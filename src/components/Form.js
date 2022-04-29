@@ -1,5 +1,7 @@
 import React from 'react'
 import { nanoid } from 'nanoid';
+import { BsPlusLg } from 'react-icons/bs'
+import Popup from './Popup';
 
 const Form = (props) => {
 
@@ -9,10 +11,14 @@ const Form = (props) => {
 
     const submitTodoHandler = (e) => {
         e.preventDefault()
-        props.setTodos([
-            ...props.todos, { text: props.inputText, completed: false, id: nanoid() }
-        ])
-        props.setInputText('')
+        if (props.inputText === '') {
+            props.setPopup(true)
+        } else {
+            props.setTodos([
+                ...props.todos, { text: props.inputText, completed: false, id: nanoid() }
+            ])
+            props.setInputText('')
+        }
     }
 
     const statusHandler = (e) => {
@@ -33,7 +39,7 @@ const Form = (props) => {
                 <button className='submit-btn'
                     onClick={submitTodoHandler}
                     className="todo-button" type="submit">
-                    Submit
+                    <BsPlusLg />
                 </button>
 
                 <div className="select">
@@ -46,6 +52,11 @@ const Form = (props) => {
                     </select>
                 </div>
             </form>
+
+            {props.popuptext &&
+                <Popup
+                    handleExit={props.handleExit}
+                />}
 
         </div>
     )

@@ -4,7 +4,7 @@ import { GiNotebook } from 'react-icons/gi'
 const Header = () => {
     return (
         <div className='header'>
-            <h1>// TO-DO <GiNotebook /> </h1> </div>
+            <h1>// TO-DO <GiNotebook className='notebook' /> </h1> </div>
 
     )
 }
