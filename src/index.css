@@ -137,11 +137,11 @@ select {
   .modal_content {
     background-color: white;
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 10%;
     width: 80%;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 2px solid black;
   }
   
@@ -151,7 +151,7 @@ select {
   }
   
   .close:hover {
-    color: cyan;
+    color: #856084;
     cursor: pointer;
   }
   
