@@ -1,13 +1,125 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    background: #CB997E;
+	font-family: 'Inter', sans-serif;
+	min-height: 100vh;
+}
+
+.header {
+	font-size: 2rem;
+	text-align: center;
+
+}
+
+.completed {
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+
+.form,
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form input,
+form button {
+	padding: 0.5rem;
+	font-size: 1rem;
+	border: 1px solid black;
+	background: #CB997E;
+}
+
+form button:hover {
+	background: #346689;
+	color: white;
+}
+
+form button {
+	color: #000000;
+	background: #CB997E;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+
+.todo-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.todo-list {
+	min-width: 30%;
+	list-style: none;
+}
+
+.todo {
+    background: #CB997E;
+	margin: 0.5rem;
+	font-size: 1.5rem;
+	color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 1s ease;
+}
+
+.filter-todo {
+	padding: .5rem;
+}
+
+.todo li {
+	flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+	background: #346689;
+	color: white;
+	border: none;
+	padding: .5rem;
+	cursor: pointer;
+	font-size: .8rem;
+}
+
+.complete-btn {
+	background: #6B705C;
+}
+
+.todo-item {
+    background: #CB997E;
+	padding: 0rem 0.5rem;
+}
+
+.select {
+text-align: center;
+}
+
+input,
+select {
+    margin: 10px;
+	font-family: 'Inter', sans-serif;
+	font-size: 1rem;
+    background: #CB997E;
+}
+
+.submit-btn {
+	background: #6B705C;
+	/* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
 }
