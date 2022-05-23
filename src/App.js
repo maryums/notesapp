@@ -39,26 +39,25 @@ const App = () => {
     }
     return (
         <div>
-
-
             <Header />
-            <Form
-                popuptext={popuptext}
-                setPopup={setPopup}
-                handleExit={handleExit}
-                todos={todos}
-                setTodos={setTodos}
-                inputText={inputText}
-                setInputText={setInputText}
-                setStatus={setStatus}
-            />
+            <main>
+                <Form
+                    popuptext={popuptext}
+                    setPopup={setPopup}
+                    handleExit={handleExit}
+                    todos={todos}
+                    setTodos={setTodos}
+                    inputText={inputText}
+                    setInputText={setInputText}
+                    setStatus={setStatus}
+                />
 
-            <TodoList
-                todos={todos}
-                setTodos={setTodos}
-                setfilteredTodos={setfilteredTodos}
-                filteredTodos={filteredTodos} />
-
+                <TodoList
+                    todos={todos}
+                    setTodos={setTodos}
+                    setfilteredTodos={setfilteredTodos}
+                    filteredTodos={filteredTodos} />
+            </main>
 
         </div>
     )

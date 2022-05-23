@@ -7,26 +7,18 @@
 }
 
 body {
-    background: #DDE1E4;
 	font-family: 'Inter', sans-serif;
 	min-height: 100vh;
 }
-
-.header {
+header {
     margin-top: 20px;
-	font-size: 2rem;
+	font-size: 1.3rem;
 	text-align: center;
-
 }
 
-.completed {
-	text-decoration: line-through;
-	opacity: 0.5;
-}
-
-.form,
-.header {
+main {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
@@ -36,26 +28,26 @@ form button {
 	padding: 0.5rem;
 	font-size: 1rem;
 	border: 1px solid black;
-	background: #DDE1E4;
-}
-
-form button:hover {
-	background: #856084;
-	color: white;
+	border-radius: 5px;
 }
 
 form button {
 	color: #000000;
-	background: #DDE1E4;
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
 
+input,
+select {
+    margin: 10px;
+	font-family: 'Inter', sans-serif;
+	font-size: 1rem;
+	border-radius: 5px;
+}
 
 .todo-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	margin-top: 10px;
+	width: 370px;
 }
 
 .todo-list {
@@ -64,7 +56,7 @@ form button {
 }
 
 .todo {
-    background: #DDE1E4;
+    background: #eef0f1;
 	margin: 0.5rem;
 	font-size: 1.5rem;
 	color: black;
@@ -72,6 +64,10 @@ form button {
 	justify-content: space-between;
 	align-items: center;
 	transition: all 1s ease;
+}
+
+.todo:nth-child(odd) {
+	background: #fff;
 }
 
 .filter-todo {
@@ -84,38 +80,38 @@ form button {
 
 .trash-btn,
 .complete-btn {
-	background: #856084;
+    background-color: #fd0060;
 	color: white;
 	border: none;
 	padding: .5rem;
-	cursor: pointer;
 	font-size: .8rem;
+	cursor: pointer;
+}
+
+.completed {
+	text-decoration: line-through;
+	opacity: 0.5;
 }
 
 .complete-btn {
-	background: #84E296;
+	background: #00b240;
 }
 
 .todo-item {
-    background: #DDE1E4;
 	padding: 0rem 0.5rem;
 }
 
 .select {
-text-align: center;
+	width: 370px;
 }
 
-input,
-select {
-    margin: 10px;
-	font-family: 'Inter', sans-serif;
-	font-size: 1rem;
-    background: #DDE1E4;
+.todo-input {
+	margin: 0.5rem;
+	width: 85%;
 }
+
 
 .submit-btn {
-	background: #6B705C;
-	/* Green */
 	border: none;
 	color: white;
 	padding: 15px 32px;
@@ -125,13 +121,12 @@ select {
 	font-size: 16px;
 }
 
-
 .modal {
     position: fixed;
     z-index: 1;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.25);
+    height: 100vh;
+    /* background-color: rgba(0, 0, 0, 0.25); */
   }
   
   .modal_content {
@@ -151,7 +146,7 @@ select {
   }
   
   .close:hover {
-    color: #856084;
+    color: #fd0060;
     cursor: pointer;
   }
   

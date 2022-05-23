@@ -26,21 +26,23 @@ const Form = (props) => {
     }
 
     return (
-        <div className='form'>
+        <>
 
             <form>
-                <input
-                    value={props.inputText}
-                    onChange={inputTextHandler}
-                    type="text"
+                <div className='input-button'>
+                    <input
+                        value={props.inputText}
+                        onChange={inputTextHandler}
+                        type="text"
 
-                    className="todo-input" />
+                        className="todo-input" />
 
-                <button className='submit-btn'
-                    onClick={submitTodoHandler}
-                    className="todo-button" type="submit">
-                    <BsPlusLg />
-                </button>
+                    <button className='submit-btn'
+                        onClick={submitTodoHandler}
+                        className="todo-button" type="submit">
+                        <BsPlusLg />
+                    </button>
+                </div>
 
                 <div className="select">
                     <select
@@ -58,7 +60,7 @@ const Form = (props) => {
                     handleExit={props.handleExit}
                 />}
 
-        </div>
+        </>
     )
 }
 
